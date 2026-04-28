@@ -215,7 +215,7 @@ onMounted(() => {
       <div class="bg-white p-8 rounded-2xl shadow-xl max-w-md w-full border border-gray-100">
         <div class="text-center mb-6">
           <img src="/logo.jpeg" alt="Logo THPT Hàm Yên" class="w-24 h-24 mx-auto mb-3 rounded-full shadow-md" />
-          <h1 class="text-xl font-bold text-gray-800">Trợ lý Hóa học AI</h1>
+          <h1 class="text-xl font-bold text-gray-800">Trợ lý Văn học AI</h1>
           <p class="text-gray-500 text-sm mt-1">Trường THPT Hàm Yên — Tuyên Quang</p>
         </div>
 
@@ -299,7 +299,7 @@ onMounted(() => {
           <div class="flex items-center space-x-3">
             <img src="/logo.jpeg" alt="Logo" class="w-10 h-10 rounded-full border-2 border-white/30" />
             <div>
-              <h1 class="text-lg font-bold leading-tight">Trợ lý Hóa học AI — THPT Hàm Yên</h1>
+              <h1 class="text-lg font-bold leading-tight">Trợ lý Văn học AI — THPT Hàm Yên</h1>
               <p class="text-xs text-white/70">Xin chào, {{ user?.name }} (Lớp {{ user?.grade }})</p>
             </div>
           </div>
@@ -325,17 +325,7 @@ onMounted(() => {
           <!-- Welcome -->
           <div v-if="messages.length === 0" class="flex flex-col items-center justify-center h-full text-gray-500 space-y-4">
             <img src="/logo.jpeg" alt="Logo THPT Hàm Yên" class="w-24 h-24 rounded-full shadow-lg mb-2" />
-            <p class="text-lg font-medium">Xin chào! Bạn muốn hỏi gì về Hóa học hôm nay?</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 max-w-lg w-full text-sm">
-              <button @click="inputMessage = 'Phản ứng thế là gì?'; sendMessage()"
-                class="p-3 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 text-left shadow-sm">
-                🧪 Phản ứng thế là gì?
-              </button>
-              <button @click="inputMessage = 'Cân bằng: Fe + H2SO4'; sendMessage()"
-                class="p-3 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 text-left shadow-sm">
-                ⚖️ Cân bằng: Fe + H2SO4
-              </button>
-            </div>
+            <p class="text-lg font-medium">Xin chào! Bạn muốn hỏi gì về Văn học hôm nay?</p>
           </div>
 
           <!-- Messages -->
@@ -356,7 +346,7 @@ onMounted(() => {
         <div class="max-w-4xl mx-auto">
           <form @submit.prevent="sendMessage" class="flex items-end space-x-2">
             <textarea v-model="inputMessage" @keydown.enter.exact.prevent="sendMessage"
-              placeholder="Nhập câu hỏi Hóa học của bạn..." rows="1"
+              placeholder="Nhập câu hỏi Văn học của bạn..." rows="1"
               class="flex-1 px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent resize-none max-h-32"
               style="min-height: 48px;"></textarea>
             <button type="submit" :disabled="!inputMessage.trim() || isLoading"
